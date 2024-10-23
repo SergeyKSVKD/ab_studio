@@ -1,0 +1,70 @@
+* {
+  box-sizing: border-box;
+  font-size: 10px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  min-height: 100vh;
+  background-color: var(--black);
+  color: var(--light-gray);
+  display: grid;
+  justify-content: center;
+  grid-template-columns: minmax(200px, 1920px);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style:none;
+  padding:0;
+  margin:0;
+}
+
+br {
+  display: block;
+  content: "";
+  margin-top: 16px ; 
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  /* Typography */
+  --fs-mini: 1.4rem;
+  --fs-sm: 1.6rem;
+  --fs-md: 2.4rem;
+  --fs-lg: 3.2rem;
+  --fw-light: 300;
+  --fw-normal: 400;
+  --fw-bold: 700;
+  --fw-extra-bold: 900;
+  --lh: 2.4rem;
+
+  /* color palette */
+  --white: rgb(255,255,255);
+  --dark-gray: rgb(23, 23, 24);
+  --light-gray: rgba(196, 200, 204, 1);
+  --black: rgb(0,0,0);
+  --brown: rgb(197, 164, 126);
+  --layout: linear-gradient(to right, rgb(51, 122, 183) 0%, rgb(25, 61, 91) 100%); 
+  --radii: 0.5rem;
+
+  /* Shadow */
+  --shadow: inset 4px 3px 8px 0px rgba(0, 0, 0, 0.3), 
+  10px 10px 10px rgba(0, 0, 0, 0.3), 
+  10px 10px 10px rgba(0, 0, 0, 0.3), 
+  inset -20px -20px 25px rgba(255, 255, 255, 0.09);
+
+  /* media query */
+}
