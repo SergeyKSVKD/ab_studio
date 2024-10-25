@@ -1,0 +1,16 @@
+.project {
+    display: grid;
+    grid-template-columns: minmax(350px, 500px);
+}
+
+.image_container {
+    position: relative;
+    height: 400px;
+    &:hover {
+        cursor: grab;
+    }
+    .image {
+        object-fit: cover;
+        object-position: center;
+    }
+}

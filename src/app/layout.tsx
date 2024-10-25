@@ -1,15 +1,10 @@
 import type { Metadata } from 'next'
 import './globals.scss'
-import { Poppins, Montserrat } from "next/font/google"
+import { Montserrat } from "next/font/google"
 import type { Viewport } from 'next'
 import Favicon from '/public/Metadata/logo.jpg';
 import Navbar from './components/navbar/Navbar';
 
-const poppins = Poppins({
-  weight: ["400", '700', '300', '900'],
-  subsets: ["latin", 'latin-ext'],
-  display: "swap",
-})
 const montserrat = Montserrat({
   weight: ["400", '700', '300', '900'],
   subsets: ["latin", 'latin-ext'],

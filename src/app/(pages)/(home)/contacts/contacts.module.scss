@@ -1,0 +1,211 @@
+.container {
+    display: grid;
+    grid-template: 'title title' 100px 
+                    'map contacts' 350px
+                    'logo socials' 100px
+                      / minmax(250px, 600px) 1fr;
+    justify-content: center;
+    justify-self: center;
+    gap: 2rem 5rem;
+
+    .ref_block {
+        position: absolute;
+        top: -100px;
+    }
+
+    .title {
+        display: grid;
+        grid-area: title;
+        align-self: center;
+        background: linear-gradient(45deg, #e7ecee 20%, #a4adb4 55%, #dbcca8 100%);
+         -webkit-background-clip: text;
+         -webkit-text-fill-color: transparent;
+        text-align: center;
+        font-weight: 700;
+        font-size: clamp(2rem, 3.2vw, 4.8rem);
+    }
+
+    .contacts {
+        display: grid;
+        grid-area: contacts;
+        align-self: center;
+        padding: 2rem;
+        .contact {
+            display: grid;
+            grid-template-columns: max-content max-content max-content;
+            gap: 1rem;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        p, a {
+            font-weight: 700;
+            font-size: clamp(1.4rem, 1.8vw, 2.4rem);
+        }
+        svg, a {
+            color: #b17e43;
+        }
+        svg {
+            font-size: clamp(1.8rem, 2.2vw, 2.8rem);
+        }
+        p {
+            margin: 0;
+        }
+        .requisites_info {
+            margin-top: 3rem;
+            opacity: 0.5;
+            p {
+                font-weight: 400;
+                margin-bottom: 0.3rem;
+                font-size: clamp(1.4rem, 1.6vw, 2.2rem);
+                .text_color {
+                    font-size: clamp(1.4rem, 1.8vw, 2.4rem);
+                    color: #b17e43;
+                }
+            }
+        }
+    }
+
+    .logo {
+        visibility: visible;
+        position: relative;
+        display: grid;
+        grid-area: logo;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--white);
+        border-radius: 1rem;
+        width: 70px;
+        height: 70px;
+        margin-left: 5rem;
+        .brand {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 10rem;
+            width: max-content;
+            font-size: clamp(1.4rem, 2vw, 2.6rem);
+            text-shadow: -4px -4px 0px var(--white);
+            background: repeating-linear-gradient(45deg, #2c323b, #2c323b 1px, white 2px, white 3px);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 700;
+        }
+    }
+
+    .socials {
+        display: grid;
+        grid-area: socials;
+        grid-template-columns: repeat(auto-fit, 50px);
+        justify-content: end;
+        margin-right: 5rem;
+        gap: 3rem;
+        a {
+            svg {
+                font-size: clamp(2.4rem, 3.4vw, 5.4rem);
+                color: #b17e43;
+            }
+            &:hover {
+                svg {
+                    transition: all 0.2s;
+                    transform: scale(1.2) rotate(5deg);
+                }
+            }
+        }
+    }
+}
+
+.map_container {
+    grid-area: map;
+    border-radius: 2rem;
+    overflow: hidden;
+    filter: brightness(0.9) grayscale(0.5);
+    z-index: 2;
+}
+
+.map {
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width: 1350px) {
+    .container {
+        grid-template: 'title title' 100px 
+        'map contacts' 300px
+        'logo socials' 100px
+          / minmax(250px, 500px) 1fr;
+        gap: 0rem 0rem;
+
+        .logo {
+            margin-left: 2rem;
+        }
+
+        .requisites_info {
+            margin-top: 2rem !important;
+        }
+
+        .map_container {
+            margin: 1rem;
+        }
+
+        .socials {
+            grid-template-columns: repeat(auto-fit, 40px);
+            justify-content: end;
+            margin-right: 5rem;
+            gap: 3rem;
+        }
+    }
+}
+
+@media (max-width: 700px) {
+    .container {
+        display: grid;
+        grid-template: 'title' 60px 
+                        'contacts' 170px
+                        'map' 250px
+                        'socials' 70px
+                          / minmax(250px, 600px);
+        justify-content: center;
+        justify-self: center;
+        gap: 0rem 2rem;
+
+        .contacts {
+            padding: 1rem 2rem 0rem;
+        }
+
+        .logo {
+            visibility: hidden;
+            display: none;
+        }
+
+        .requisites_info {
+            margin-top: 0.5rem !important;
+            p {
+                font-weight: 400;
+                margin-bottom: 0.1rem !important;
+            }
+        }
+
+        .map_container {
+            margin: 2rem;
+        }
+
+        .socials {
+            grid-template-columns: repeat(auto-fit, 30px);
+            justify-content: end;
+            margin-right: 5rem;
+            gap: 2rem;
+            a {
+                svg {
+                    font-size: clamp(3.4rem, 4.8vw, 5.4rem);
+                    color: #b17e43;
+                }
+                &:hover {
+                    svg {
+                        transition: all 0.2s;
+                        transform: scale(1.2) rotate(5deg);
+                    }
+                }
+            }
+        }
+    }
+}

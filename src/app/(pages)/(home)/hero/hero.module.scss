@@ -36,7 +36,7 @@
         }
 
         .subtitle {
-            font-size: clamp(1.4rem, 1.8vw, 2.4rem);
+            font-size: clamp(1.2rem, 1.8vw, 2.4rem);
             margin: 0 10%;
             text-align: left;
         }
@@ -45,6 +45,6 @@
 
 @media (max-width: 800px) {
     .container {
-        height: 600px;
+        height: 500px;
     }
 }
