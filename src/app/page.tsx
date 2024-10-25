@@ -16,8 +16,8 @@ export default function Page() {
     <AboutUs />
     <AboutTeam />
     <Course />
-    <Expert />
     <OurProject />
+    <Expert />
     <Contacts />
   </div>
 }

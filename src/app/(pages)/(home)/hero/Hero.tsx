@@ -3,11 +3,9 @@
 import Image from 'next/image'
 import styles from './hero.module.scss'
 import HeroImg from '../../../../../public/hero.webp'
-import { useQuery } from '@/app/helpers/useQuery'
 import { motion } from 'framer-motion'
 
 const Hero = () => {
-    const size = useQuery(`(max-width: 540px)`)
 
     return <section className={styles.container}>
         <Image
