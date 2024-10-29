@@ -67,18 +67,19 @@ function ParallaxText({ children, baseVelocity = 100 }: ParallaxProps) {
 }
 
 const Advantages = () => {
-    const container = useRef<HTMLDivElement>(null)
-    const isInView = useInView(container, { once: false })
+    // const container = useRef<HTMLDivElement>(null)
+    // const isInView = useInView(container, { once: false })
 
-    return <div ref={container} className={styles.container}>
-        {isInView && <>
+    // return <div ref={container} className={styles.container}>
+    return <div className={styles.container}>
+        {/* {isInView && <> */}
             <ParallaxText baseVelocity={-1}>Экспертные исполнители</ParallaxText>
             <ParallaxText baseVelocity={1}>Прогрессивный подход</ParallaxText>
             <ParallaxText baseVelocity={-1}>Современные технологии</ParallaxText>
             <ParallaxText baseVelocity={1}>Гарантия качества</ParallaxText>
             <ParallaxText baseVelocity={-1}>Топовый инструмент</ParallaxText>
-        </>
-        }
+        {/* </>
+        } */}
     </div>
 }
 

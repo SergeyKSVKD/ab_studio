@@ -844,44 +844,44 @@ const OurProject = forwardRef(function Contacts(props, ref: ForwardedRef<HTMLDiv
             <div className={styles.mosaic}>
                 {isInView_2 && <>
                     <motion.div
-                        initial={{ scale: 0, opacity: 0, y: 200 }}
-                        animate={{ scale: 1, opacity: 1, y: 0 }}
+                        initial={{ scale: 0, opacity: 0, x: 200 }}
+                        animate={{ scale: 1, opacity: 1, x: 0 }}
                         transition={{ ...transition }}
                         className={styles.img2_1}
                     >{React.createElement(Card13)}</motion.div>
                     <motion.div
-                        initial={{ scale: 0, opacity: 0, y: 200 }}
-                        animate={{ scale: 1, opacity: 1, y: 0 }}
+                        initial={{ scale: 0, opacity: 0 }}
+                        animate={{ scale: 1, opacity: 1 }}
                         transition={{ ...transition }}
                         className={styles.img2_2}
                     >{React.createElement(Card14)}</motion.div>
                     <motion.div
-                        initial={{ scale: 0, opacity: 0, y: 200 }}
-                        animate={{ scale: 1, opacity: 1, y: 0 }}
+                        initial={{ scale: 0, opacity: 0 }}
+                        animate={{ scale: 1, opacity: 1 }}
                         transition={{ ...transition }}
                         className={styles.img2_3}
                     >{React.createElement(Card15)}</motion.div>
                     <motion.div
-                        initial={{ scale: 0, opacity: 0, y: 200 }}
-                        animate={{ scale: 1, opacity: 1, y: 0 }}
+                              initial={{ scale: 0, opacity: 0, rotate: -15 }}
+                              animate={{ scale: 1, opacity: 1, rotate: 0 }}
                         transition={{ ...transition }}
                         className={styles.img2_4}
                     >{React.createElement(Card16)}</motion.div>
                     <motion.div
-                        initial={{ scale: 0, opacity: 0, y: 200 }}
-                        animate={{ scale: 1, opacity: 1, y: 0 }}
+                        initial={{ scale: 0, opacity: 0 }}
+                        animate={{ scale: 1, opacity: 1 }}
                         transition={{ ...transition }}
                         className={styles.img2_6}
                     >{React.createElement(Card18)}</motion.div>
                     <motion.div
-                        initial={{ scale: 0, opacity: 0, y: 200 }}
+                        initial={{ scale: 0, opacity: 0, y: -200 }}
                         animate={{ scale: 1, opacity: 1, y: 0 }}
                         transition={{ ...transition }}
                         className={styles.img2_8}
                     >{React.createElement(Card20)}</motion.div>
                     <motion.div
-                        initial={{ scale: 0, opacity: 0, y: 200 }}
-                        animate={{ scale: 1, opacity: 1, y: 0 }}
+                        initial={{ scale: 0, opacity: 0 }}
+                        animate={{ scale: 1, opacity: 1 }}
                         transition={{ ...transition }}
                         className={styles.img2_10}
                     >{React.createElement(Card22)}</motion.div>
@@ -901,44 +901,44 @@ const OurProject = forwardRef(function Contacts(props, ref: ForwardedRef<HTMLDiv
             <div className={styles.mosaic}>
                 {isInView_3 && <>
                     <motion.div
-                        initial={{ scale: 0, opacity: 0, y: 200 }}
-                        animate={{ scale: 1, opacity: 1, y: 0 }}
+                        initial={{ scale: 0, opacity: 0, x: 200 }}
+                        animate={{ scale: 1, opacity: 1, x: 0 }}
                         transition={{ ...transition }}
                         className={styles.img3_1}
                     >{React.createElement(Card25)}</motion.div>
                     <motion.div
-                        initial={{ scale: 0, opacity: 0, y: 200 }}
-                        animate={{ scale: 1, opacity: 1, y: 0 }}
+                        initial={{ scale: 0, opacity: 0 }}
+                        animate={{ scale: 1, opacity: 1 }}
                         transition={{ ...transition }}
                         className={styles.img3_2}
                     >{React.createElement(Card26)}</motion.div>
                     <motion.div
-                        initial={{ scale: 0, opacity: 0, y: 200 }}
-                        animate={{ scale: 1, opacity: 1, y: 0 }}
+                        initial={{ scale: 0, opacity: 0 }}
+                        animate={{ scale: 1, opacity: 1 }}
                         transition={{ ...transition }}
                         className={styles.img3_3}
                     >{React.createElement(Card27)}</motion.div>
                     <motion.div
-                        initial={{ scale: 0, opacity: 0, y: 200 }}
-                        animate={{ scale: 1, opacity: 1, y: 0 }}
+                        initial={{ scale: 0, opacity: 0, rotate: -15 }}
+                        animate={{ scale: 1, opacity: 1, rotate: 0 }}
                         transition={{ ...transition }}
                         className={styles.img3_4}
                     >{React.createElement(Card28)}</motion.div>
                     <motion.div
-                        initial={{ scale: 0, opacity: 0, y: 200 }}
-                        animate={{ scale: 1, opacity: 1, y: 0 }}
+                        initial={{ scale: 0, opacity: 0 }}
+                        animate={{ scale: 1, opacity: 1 }}
                         transition={{ ...transition }}
                         className={styles.img3_6}
                     >{React.createElement(Card30)}</motion.div>
                     <motion.div
-                        initial={{ scale: 0, opacity: 0, y: 200 }}
+                        initial={{ scale: 0, opacity: 0, y: -200 }}
                         animate={{ scale: 1, opacity: 1, y: 0 }}
                         transition={{ ...transition }}
                         className={styles.img3_8}
                     >{React.createElement(Card32)}</motion.div>
                     <motion.div
-                        initial={{ scale: 0, opacity: 0, y: 200 }}
-                        animate={{ scale: 1, opacity: 1, y: 0 }}
+                        initial={{ scale: 0, opacity: 0 }}
+                        animate={{ scale: 1, opacity: 1 }}
                         transition={{ ...transition }}
                         className={styles.img3_10}
                     >{React.createElement(Card34)}</motion.div>
