@@ -3,8 +3,9 @@
     gap: 2rem 5rem;
     grid-template: 'image title' 150px
                     'image info' 350px
-                      / 400px 1fr;
+                      / 400px minmax(600px, 1000px);
     align-items: start;
+    justify-content: center;
     padding: 2rem 4rem;
     height: auto;
     width: 100%;

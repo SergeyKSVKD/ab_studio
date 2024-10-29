@@ -11,7 +11,7 @@ const Hero = () => {
         <Image
             src={HeroImg}
             alt='hero'
-            quality={75}
+            quality={50}
             priority
             fill
             width={0}
@@ -29,35 +29,37 @@ const Hero = () => {
             <motion.h1 className={styles.title}
                 initial={{
                     opacity: 0,
-                    y: -100
+                    y: -100,
+                    scale: 0,
                 }}
                 animate={{
                     opacity: 1,
-                    y: 0
+                    y: 0,
+                    scale: 1,
                 }}
                 transition={{
                     type: "spring", 
-                    mass: 0.8,
                     stiffness: 100,
-                    duration: 0.5,
-                    ease: 'linear'
+                    duration: 0.6,
+                    delay: 0.5,
                 }}
             ><span className={styles.brand}>AB Studio</span>{<pre></pre>} Студия ремонта и дизайна</motion.h1>
             <motion.h4 className={styles.subtitle}
                 initial={{
                     opacity: 0,
-                    y: 100
+                    y: 100,
+                    scale: 0,
                 }}
                 animate={{
                     opacity: 1,
-                    y: 0
+                    y: 0,
+                    scale: 1,
                 }}
                 transition={{
                     type: "spring", 
-                    mass: 0.8,
                     stiffness: 100,
-                    duration: 0.5,
-                    ease: 'linear'
+                    duration: 0.6,
+                    delay: 0.5,
                 }}
             >AB studio-студия прогрессивного ремонта полного цикла. Всё от проекта до мебели. Умный дом. Договор. Гарантия</motion.h4>
         </div>

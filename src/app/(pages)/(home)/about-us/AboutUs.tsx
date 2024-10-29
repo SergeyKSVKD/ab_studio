@@ -23,7 +23,7 @@ const AboutUs = () => {
             <Image
                 src={AboutUsImg}
                 alt='о-нас'
-                quality={75}
+                quality={50}
                 priority
                 fill
                 width={0}
