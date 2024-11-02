@@ -5,10 +5,12 @@ import AboutUsImg from '../../../../../public/about-us.webp'
 import { FaTelegramPlane } from "react-icons/fa";
 import { TfiYoutube } from "react-icons/tfi";
 import Link from 'next/link';
+import { ForwardedRef, forwardRef } from 'react';
 
-const AboutUs = () => {
+const AboutUs = forwardRef(function Contacts(props, ref: ForwardedRef<HTMLDivElement>) {
 
     return <section className={styles.container}>
+        <div ref={ref} className={styles.ref_block} />
         <h2 className={styles.brand}>AB Studio since 2020</h2>
         <div className={styles.text}>
             <p>Команда <span className={styles.text_color}>профессионалов</span> с новейшим техническим оборудованием выполнит ремонт <span className={styles.text_color}>любой сложности</span> в точные сроки. Вы получите <span className={styles.text_color}>прозрачность</span> расходов, обоснованное ценообразование, взаимопонимание и превосходный результат.</p>
@@ -38,6 +40,6 @@ const AboutUs = () => {
             />
         </div>
     </section>
-}
+})
 
 export default AboutUs

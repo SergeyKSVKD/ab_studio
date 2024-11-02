@@ -1,14 +1,175 @@
 .navbar {
     position: fixed;
+    display: grid;
+    grid-template-columns: 100px 560px 440px;
+    align-content: center;
+    justify-content: space-between;
     width: 100%;
     max-width: 1920px;
     height: 70px;
     display: grid;
     align-items: center;
     justify-self: center;
-    padding: 0rem 2rem;
+    padding: 0rem 3rem;
     z-index: 50;
     background: var(--black);
-    background: linear-gradient(83deg, #000 17%, rgba(0, 0, 0, .5) 46%, rgba(0, 0, 0, .6) 64%, #000 82%);
+    background: linear-gradient(83deg, rgba(0, 0, 0, .7) 17%, rgba(0, 0, 0, .5) 46%, rgba(0, 0, 0, .6) 64%, rgba(0, 0, 0, .7) 82%);
     backdrop-filter: blur(5px) saturate(180%);
+    img {
+        border-radius: 1rem;
+        z-index: 1;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+    .menu {
+        display: flex;
+        gap: 2rem;
+        span {
+            display: grid;
+            font-weight: 700;
+            align-items: center;
+            height: 50px;
+            font-size: clamp(1.4rem, 1.8vw, 2.4rem);
+            transition: all ease-in-out 0.2s;
+            &:hover {
+                cursor: pointer;
+                transform: translateY(-2px);
+                border-bottom: 2px solid var(--white);
+                color: var(--white);
+            }
+        }
+    }
+    .feedback {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        .phone {
+            width: max-content;
+            font-size: clamp(1.4rem, 1.8vw, 2.4rem);
+            transition: all ease-in-out 0.2s;
+            &:hover {
+                transform: translateY(-2px);
+                cursor: pointer;
+                color: var(--white);
+            }
+        }
+        .contact {
+            width: max-content;
+            height: 45px;
+            font-size: clamp(1.4rem, 1.6vw, 2rem);
+            padding: 0rem 2rem;
+            color: var(--white);
+            background: 
+                linear-gradient(rgb(0,0,0) 0 0) padding-box,
+                linear-gradient(to right, rgba(252, 203, 90, 1) 0%, rgba(8,192,186,1) 100%) border-box;
+            border: 2px solid transparent;
+            border-radius: 2rem;
+            transition: all ease-in-out 0.2s;
+            &:hover {
+                cursor: pointer;
+                background: linear-gradient(to right, rgba(252, 203, 90, 1) 0%, rgba(8,192,186,1) 100%) border-box;
+                color: var(--black);
+            }
+        }
+    }
 }
+
+@media (max-width: 1200px) {
+    .navbar {
+        grid-template-columns: 100px 500px 220px;
+        height: 70px;
+        padding: 0rem 2rem;
+        .menu {
+            gap: 1.5rem;
+            span {
+                height: 50px;
+                font-size: clamp(1.4rem, 1.8vw, 2.4rem);
+            }
+        }
+        .feedback {
+            gap: 1rem;
+            .phone {
+                display: none;
+            }
+            .contact {
+                width: max-content;
+                height: 40px;
+            }
+        }
+    }
+}
+
+@media (max-width: 840px) {
+    .navbar {
+        grid-template-columns: 100px 400px;
+        height: 70px;
+        padding: 0rem 2rem;
+        .menu {
+            gap: 1.5rem;
+            span {
+                height: 50px;
+                font-size: clamp(1.4rem, 1.8vw, 2.4rem);
+            }
+        }
+        .feedback {
+            .phone {
+                display: none;
+            }
+            .contact {
+                display: none;
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        grid-template-columns: 100px 1fr;
+        height: 70px;
+        padding: 0rem 2rem;
+        .menu {
+            display: none;
+        }
+        .feedback {
+            .phone {
+                display: none;
+            }
+            .contact {
+                display: none;
+            }
+        }
+    }
+}
+
+.menu_mobile {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    color: var(--white);
+    background: var(--black);
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    gap: 2rem;
+        div {
+            span {
+                display: inline-block;
+                width: 100%;
+                font-size: 2.4rem;
+                line-height: 2.6rem;
+                text-align: center;
+                transition: all ease-in-out 0.2s;
+                // text-shadow: 1px 1px 1px white, 0 0 1em wheat, 0 0 0.2em whitesmoke;
+                &:hover {
+                    cursor: pointer;
+                    transform: scale(1.02);
+                }
+            }
+        }
+}
+
+

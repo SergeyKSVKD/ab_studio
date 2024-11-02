@@ -1,0 +1,104 @@
+.container {
+    position: relative;
+    width: 100%;
+    user-select: none;
+    &:hover {
+        cursor: pointer;
+    }
+    .before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        color: var(--white);
+        font-weight: 700;
+        font-size: clamp(1.4rem, 2vw, 2.4rem);
+        background-color: rgba(0, 0, 0, .7);
+        padding: 1rem;
+        z-index: 1;
+    }
+    .after {
+        position: absolute;
+        top: 0;
+        right: 0;
+        color: var(--white);
+        font-weight: 700;
+        font-size: clamp(1.4rem, 2vw, 2.4rem);
+        background-color: rgba(0, 0, 0, .7);
+        padding: 1rem;
+        z-index: 1;
+    }
+    .image_after_container {
+        position: relative;
+        width: 100%;
+        max-width: 1000px;
+        aspect-ratio: 70/45;
+        margin: auto;
+        overflow: hidden;
+        user-select: none;
+    }
+    .image_before_container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        max-width: 1000px;
+        aspect-ratio: 70/45;
+        margin: auto;
+        overflow: hidden;
+        user-select: none;
+        z-index: 2;
+    }
+
+    .slider {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 2px;
+        background: var(--white);
+        z-index: 2;
+        &:hover {
+            .cursor {
+                .arrow_left {
+                    transform: translateX(-2px);
+                }
+                .arrow_right {
+                    transform: translateX(2px);
+                }
+            }
+        }
+        .cursor {
+            position: absolute;
+            background: var(--white);
+            border: 1px solid var(--white);
+            height: 50px;
+            width: 4px;
+            left: -1px;
+            top: calc(50% - 25px);
+            z-index: 2;
+            .arrow_left {
+                position: absolute;
+                top: calc(50% - 8px);
+                left: -16px;
+                width: 0;
+                height: 0;
+                border-top: 8px solid transparent;
+                border-bottom: 8px solid transparent;
+                border-right: 12px solid var(--white);
+                transition: all ease-in-out 0.2s;
+            }
+            .arrow_right {
+                position: absolute;
+                top: calc(50% - 8px);
+                right: -16px;
+                width: 0;
+                height: 0;
+                border-top: 8px solid transparent;
+                border-bottom: 8px solid transparent;
+                border-left: 12px solid var(--white);
+                transition: all ease-in-out 0.2s;
+            }
+        }
+    }
+}

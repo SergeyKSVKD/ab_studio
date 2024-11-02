@@ -42,7 +42,7 @@ const Expert = () => {
                                     ...transition,
                                     delay: 0.75
                                 }} key={2}
-                            ><span>Отделочник со стажем <span className={styles.text_color}>{<AnimatedCounter from={1} to={12} durations={0.5} delay={0.65} />}+</span> лет</span>
+                            ><span>Отделочник со стажем <span className={styles.text_color}>{<AnimatedCounter from={1} to={12} durations={0.5} delay={0.6} />}+</span> лет</span>
                             </motion.li>
                             <motion.li
                                 initial={{ scale: 0, opacity: 0 }}
@@ -51,7 +51,7 @@ const Expert = () => {
                                     ...transition,
                                     delay: 1.5
                                 }} key={3}
-                            ><span>Сдано квадратных метров <span className={styles.text_color}>{<AnimatedCounter from={1} to={2700} durations={0.5} delay={1.4} />}+</span></span>
+                            ><span>Сдано квадратных метров <span className={styles.text_color}>{<AnimatedCounter from={1} to={2700} durations={0.5} delay={1.35} />}+</span></span>
                             </motion.li>
                             <motion.li
                                 initial={{ scale: 0, opacity: 0 }}
@@ -60,7 +60,7 @@ const Expert = () => {
                                     ...transition,
                                     delay: 2.25
                                 }} key={4}
-                            ><span>Принято от застройщика квартир <span className={styles.text_color}>{<AnimatedCounter from={1} to={300} durations={0.5} delay={2.15} />}+</span></span>
+                            ><span>Принято от застройщика квартир <span className={styles.text_color}>{<AnimatedCounter from={1} to={300} durations={0.5} delay={2.1} />}+</span></span>
                             </motion.li>
                             <motion.li
                                 initial={{ scale: 0, opacity: 0 }}
@@ -69,7 +69,7 @@ const Expert = () => {
                                     ...transition,
                                     delay: 3
                                 }} key={5}
-                            ><span>Просмотров на <span className={styles.text_color}>YouTube</span> канале <span className={styles.text_color}>{<AnimatedCounter from={0.01} to={1.65} durations={0.5} delay={2.9} fixed={2} />} млн+</span></span>
+                            ><span>Просмотров на <span className={styles.text_color}>YouTube</span> канале <span className={styles.text_color}>{<AnimatedCounter from={0.01} to={1.91} durations={0.5} delay={2.85} fixed={2} />} млн+</span></span>
                             </motion.li>
                         </AnimatePresence>
                     </ul>}

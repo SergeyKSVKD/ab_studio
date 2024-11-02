@@ -1,4 +1,5 @@
 .project_block_1 {
+    position: relative;
     display: grid;
     justify-content: center;
     grid-template: 'title_1 title_1' 100px 
@@ -10,7 +11,7 @@
 
     .ref_block {
         position: absolute;
-        top: -100px;
+        top: -70px;
     }
 
     .title {

@@ -3,7 +3,6 @@ import './globals.scss'
 import { Montserrat } from "next/font/google"
 import type { Viewport } from 'next'
 import Favicon from '/public/Metadata/logo.jpg';
-import Navbar from './components/navbar/Navbar';
 
 const montserrat = Montserrat({
   weight: ["400", '700', '300', '900'],
@@ -69,7 +68,6 @@ export default function RootLayout({
   return (
     <html lang="ru-Ru">
       <body className={montserrat.className}>
-        <Navbar />
         {children}
       </body>
     </html>
