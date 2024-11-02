@@ -22,10 +22,7 @@ const ImageSlider = () => {
 
     const touchMove = (event: TouchEvent<HTMLDivElement>) => {
         const rect = event.currentTarget.getBoundingClientRect();
-        console.log(event.touches[0].clientX);
-
         const x = Math.max(0, Math.min(event.touches[0].clientX - rect.left, rect.width))
-        console.log(x);
         const percent = Math.max(0, Math.min((x / rect.width) * 100, 100))
 
         setSliderPosition(percent)
