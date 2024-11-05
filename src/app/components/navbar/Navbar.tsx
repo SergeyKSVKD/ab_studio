@@ -11,6 +11,7 @@ interface NavbarI {
     aboutUs: RefObject<HTMLDivElement>
     course: RefObject<HTMLDivElement>
     ourProject: RefObject<HTMLDivElement>
+    feedback: RefObject<HTMLDivElement>
     contacts: RefObject<HTMLDivElement>
 }
 
@@ -41,7 +42,7 @@ export const listItemVariants = {
     },
 }
 
-const Navbar = ({ aboutUs, course, ourProject, contacts }: NavbarI) => {
+const Navbar = ({ aboutUs, course, ourProject, feedback, contacts }: NavbarI) => {
     const [opened, setOpened] = useState<boolean>(false)
     const isMobile = useQuery(`(max-width: 480px)`)
 
@@ -74,7 +75,7 @@ const Navbar = ({ aboutUs, course, ourProject, contacts }: NavbarI) => {
                 +7 (927) 754-87-32
             </Link>
             <button className={styles.contact}
-            // onClick={() => props.feedback && props.feedback.current?.scrollIntoView({ behavior: "smooth", block: "start" })}
+            onClick={() => feedback.current?.scrollIntoView({ behavior: "smooth", block: "start" })}
             >Связаться с нами</button>
         </div>
 

@@ -1,0 +1,30 @@
+.customCheckbox {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+.checkbox {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    border: 2px solid var(--brown);
+    background: var(--black);
+    margin-right: 4px;
+    &:hover {
+        cursor: pointer;
+    }
+    &.active {
+        border-color: var(--brown);
+        background: var(--black);
+    }
+}
+
+.text {
+    font-size: clamp(1.2rem, 1.3vw, 1.4rem);
+}
