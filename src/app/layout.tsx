@@ -11,7 +11,7 @@ const montserrat = Montserrat({
 })
 
 export const metadata: Metadata = {
-  title: 'AB studio | Студия ремонта и дизайна',
+  title: 'Design studio | Студия ремонта и дизайна',
   description: '',
   icons: [{ rel: 'icon', url: Favicon.src }],
   alternates: {

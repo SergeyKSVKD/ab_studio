@@ -11,15 +11,15 @@ const AboutUs = forwardRef(function Contacts(props, ref: ForwardedRef<HTMLDivEle
 
     return <section className={styles.container}>
         <div ref={ref} className={styles.ref_block} />
-        <h2 className={styles.brand}>AB Studio since 2020</h2>
+        <h2 className={styles.brand}>Design Studio since</h2>
         <div className={styles.text}>
             <p>Команда <span className={styles.text_color}>профессионалов</span> с новейшим техническим оборудованием выполнит ремонт <span className={styles.text_color}>любой сложности</span> в точные сроки. Вы получите <span className={styles.text_color}>прозрачность</span> расходов, обоснованное ценообразование, взаимопонимание и превосходный результат.</p>
             <p>Используем современные технологии согласно лучшим <span className={styles.text_color}>строительным практикам.</span></p>
             <p>Гарантия на работы. Поэтапная оплата. Фиксированная стоимость. Работаем по договору.</p>
             <p>Подписывайся на <span className={styles.text_color}>наши каналы</span> и следи за ходом работ:</p>
             <br />
-            <Link className={cn(styles.link, styles.text_color)} href='https://t.me/remont_smr'><FaTelegramPlane /> https://t.me/remont_smr</Link>
-            <Link className={cn(styles.link, styles.text_color)} href='https://youtube.com/@remont_smr'><TfiYoutube /> https://youtube.com/@remont_smr</Link>
+            <Link className={cn(styles.link, styles.text_color)} href='https://t.me/xxx'><FaTelegramPlane /> https://t.me/xxx</Link>
+            <Link className={cn(styles.link, styles.text_color)} href='https://youtube.com/@xxxxxxx'><TfiYoutube /> https://youtube.com/@xxxxxxx</Link>
         </div>
         <div className={styles.image_container}>
             <Image

@@ -204,7 +204,7 @@ const Form = forwardRef(function Contacts(props, ref: ForwardedRef<HTMLDivElemen
 
     return (
         <section className={styles.container}>
-            <h2 className={styles.title}>Заполни анкету и получи проект мечты или пробный доступ к авторскому курсу "Ремонт с нуля" БЕСПЛАТНО</h2>
+            <h2 className={styles.title}>Заполни анкету и получи проект мечты или пробный доступ к авторскому курсу "Ремонт для начинающих" БЕСПЛАТНО</h2>
             <div ref={ref} className={styles.ref_block} />
             <form className={styles.form_container} onSubmit={handleSubmit(onSubmit)}>
                 <div className={styles.image_container}>
@@ -278,7 +278,7 @@ const Form = forwardRef(function Contacts(props, ref: ForwardedRef<HTMLDivElemen
                                     setMessage('')
                                 }}
                             />
-                            <p className={cn(styles.agreement)}>Я прочитал <Link className={cn(styles.link)} href='https://abstudiokurs.ru/policy'>пользовательское соглашение</Link> и даю согласие на обработку
+                            <p className={cn(styles.agreement)}>Я прочитал <Link className={cn(styles.link)} href='https://policy'>пользовательское соглашение</Link> и даю согласие на обработку
                                 персональных данных</p>
                             {message && !stateTerms && (
                                 <span role="alert" className={cn(styles.error_terms)}>

@@ -71,8 +71,8 @@ const Navbar = ({ aboutUs, course, ourProject, feedback, contacts }: NavbarI) =>
             </span>
         </div>
         <div className={styles.feedback}>
-            <Link className={styles.phone} href='tel:+79277548732'>
-                +7 (927) 754-87-32
+            <Link className={styles.phone} href='tel:+xxxxxxxxxxx'>
+                +7 (xxx) xxx-xx-xx
             </Link>
             <button className={styles.contact}
             onClick={() => feedback.current?.scrollIntoView({ behavior: "smooth", block: "start" })}

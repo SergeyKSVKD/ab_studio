@@ -11,12 +11,12 @@ const Course = forwardRef(function Contacts(props, ref: ForwardedRef<HTMLDivElem
     return <>
         <section className={styles.container}>
             <div ref={ref} className={styles.ref_block} />
-            <h2 className={styles.title}>Авторский курс “Ремонт с нуля”</h2>
+            <h2 className={styles.title}>Авторский курс “Ремонт для начинающих”</h2>
             <div className={cn(styles.text, styles.text_block1)}>
-                <p>Для тех, кто планирует ремонт Алексей Белянин - основатель AB Studio записал свой <span className={styles.text_color}>авторский курс «Ремонт с нуля».</span></p>
+                <p>Для тех, кто планирует ремонт Иван - основатель Design Studio записал свой <span className={styles.text_color}>авторский курс «Ремонт для начинающих».</span></p>
                 <p><span className={styles.text_color}>Благодаря экспертным знаниям</span>, собранным в курсе и отточенному годами опыту слово "ремонт" больше не будет для вас синонимом головной боли! Он <span className={styles.text_color}>станет быстрым и приятным опытом</span>, каким и должен быть.</p>
                 <p>Преображение квартиры или дома <span className={styles.text_color}>без больших вложений</span> станет не просто возможным, а даже неминуемым для вас, потому что вы выбрали <span className={styles.text_color}>ВЕРНЫЙ КУРС</span></p>
-                <p><Link className={cn(styles.link, styles.text_color)} href='https://abstudiokurs.ru/course'>Подробности по ссылке!</Link></p>
+                <p><Link className={cn(styles.link, styles.text_color)} href='https://course'>Подробности по ссылке!</Link></p>
             </div>
             <div className={styles.image_container}>
                 <Image
@@ -45,7 +45,7 @@ const Course = forwardRef(function Contacts(props, ref: ForwardedRef<HTMLDivElem
             <p><span className={styles.text_color}>Составлять ТЗ для исполнителей.</span> У Вас больше не будет вопросов: -Почему сделали «так, а не иначе» и Вы не услышите ответов, что «Вы не спрашивали, мы и не предлагали». <span className={styles.text_color}>Теперь Вы понимаете суть каждого этапа</span> и сможете ясно изложить свои потребности и поймете, если Вас попытаются обмануть.</p>
             <p><span className={styles.text_color}>Грамотно экономить на материалах.</span> Разберетесь в разных видах материала и сможете выбрать те, которые впишутся в Ваш бюджет и при этом <span className={styles.text_color}>не снизят качество ремонта.</span> А при желании улучшить отделку в последующем, Вам не придется начинать все с нуля, так как <span className={styles.text_color}>у Вас будет заложена отличная база.</span></p>
             <p><span className={styles.text_color}>Планировать бюджет.</span> В курсе представлена выборка по всем основным строительным материалам актуальным на данный момент на рынке из разных ценовых сегментов, теперь Вам решать на чем <span className={styles.text_color}>можно сэкономить минимум миллион рублей</span>, а на чем не стоит и самое главное, как не попасть на полную переделку, выбрав не качественный или не подходящий материал. Наличие на рынке огромного количества аналогов вовсе не означает широкие возможности.</p>
-            <p><Link className={cn(styles.link, styles.text_color)} href='https://abstudiokurs.ru/course'>Подробности по ссылке!</Link></p>
+            <p><Link className={cn(styles.link, styles.text_color)} href='https://course'>Подробности по ссылке!</Link></p>
         </div>
     </>
 })

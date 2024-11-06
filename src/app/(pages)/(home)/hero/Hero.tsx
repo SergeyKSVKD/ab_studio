@@ -43,7 +43,7 @@ const Hero = () => {
                     duration: 0.6,
                     delay: 0.5,
                 }}
-            ><span className={styles.brand}>AB Studio</span>{<pre></pre>} Студия ремонта и дизайна</motion.h1>
+            ><span className={styles.brand}>Design Studio</span>{<pre></pre>} Студия ремонта и дизайна</motion.h1>
             <motion.h4 className={styles.subtitle}
                 initial={{
                     opacity: 0,
@@ -61,7 +61,7 @@ const Hero = () => {
                     duration: 0.6,
                     delay: 0.5,
                 }}
-            >AB studio-студия прогрессивного ремонта полного цикла. Всё от проекта до мебели. Умный дом. Договор. Гарантия</motion.h4>
+            >Design Studio - студия прогрессивного ремонта полного цикла. Всё от проекта до мебели. Умный дом. Договор. Гарантия</motion.h4>
         </div>
     </section>
 }

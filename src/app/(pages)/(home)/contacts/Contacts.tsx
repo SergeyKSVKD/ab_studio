@@ -25,26 +25,26 @@ const Contacts = forwardRef(function Contacts(props, ref: ForwardedRef<HTMLDivEl
                 <p className={styles.contact}>
                     <IoPhonePortraitOutline />
                     Телефон:
-                    <Link className={styles.link} href='tel:+7 (927) 754-87-32'>
-                        +7 (927) 754-87-32</Link>
+                    <Link className={styles.link} href='tel:+7 (xxx) xxx-xx-xx'>
+                        +7 (xxx) xxx-xx-xx</Link>
                 </p>
                 <p className={styles.contact}>
                     <IoIosMail />
                     E-mail:
-                    <Link className={styles.link} href='mailto: info@abstudiokurs.ru'>
-                        info@abstudiokurs.ru</Link>
+                    <Link className={styles.link} href='mailto: info@info.ru'>
+                        info@info.ru</Link>
                 </p>
                 <p className={cn(styles.contact)}>
-                    <FaMapMarkerAlt />Ново-Садовая улица, Самара
+                    <FaMapMarkerAlt />улица, Самара
                 </p>
                 <p className={cn(styles.requisites, styles.contact)}>
-                    <TbInfoSquare />ИП Белянин Алексей Борисович
+                    <TbInfoSquare />ИП Рога и Копыта
                 </p>
                 <div className={styles.requisites_info}>
-                    <p>ИНН: <span className={styles.text_color}>631929503350</span></p>
+                    <p>ИНН: <span className={styles.text_color}>xxxxxxxxxxxx</span></p>
                     {/* <p>ОКПО: <span className={styles.text_color}>2024277861</span></p>
                     <p>ОКАТО: <span className={styles.text_color}>36401373000</span></p> */}
-                    <p>ОРГНИП: <span className={styles.text_color}>323631200110953</span></p>
+                    <p>ОРГНИП: <span className={styles.text_color}>xxxxxxxxxxxxxxx</span></p>
                 </div>
             </div>
             <div className={styles.logo}>
@@ -60,9 +60,9 @@ const Contacts = forwardRef(function Contacts(props, ref: ForwardedRef<HTMLDivEl
                 <span className={styles.brand}>Студия ремонта и дизайна</span>
             </div>
             <div className={styles.socials}>
-                <Link href='https://vk.com/ab_remont_smr'><SlSocialVkontakte /></Link>
-                <Link href='https://t.me/remont_smr'><FaTelegramPlane /></Link>
-                <Link href='https://youtube.com/@remont_smr'><TfiYoutube /></Link>
+                <Link href='https://vk.com/xxxxxxx'><SlSocialVkontakte /></Link>
+                <Link href='https://t.me/xxx'><FaTelegramPlane /></Link>
+                <Link href='https://youtube.com/@xxxxxxx'><TfiYoutube /></Link>
             </div>
         </footer>
     )
