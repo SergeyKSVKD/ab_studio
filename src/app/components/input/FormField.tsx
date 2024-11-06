@@ -43,7 +43,6 @@ const FormField: React.FC<IFormFieldProps> = ({
                 <span className={styles.label}>{label}{isRequired && <span className={styles.required}> *</span>}</span>
                 {
                     type === 'text' && <Input
-                        onChange={onChange}
                         value={value}
                         id={name}
                         name={name}
@@ -58,12 +57,13 @@ const FormField: React.FC<IFormFieldProps> = ({
                         aria-invalid={error ? "true" : "false"}
                         onBlur={onBlur}
                         onFocus={onFocus}
-                        {...register(name)}
+                        {...register(name, {
+                            onChange: onChange
+                        })}
                     />
                 }
                 {
                     type === 'tel' && <Input
-                        onChange={onChange}
                         value={value}
                         id={name}
                         name={name}
@@ -80,7 +80,9 @@ const FormField: React.FC<IFormFieldProps> = ({
                         onFocus={onFocus}
                         onInput={onInput}
                         onKeyDown={onKeyDown}
-                        {...register(name)}
+                        {...register(name, {
+                            onChange: onChange
+                        })}
                     />
                 }
                 <div className={styles.container}>

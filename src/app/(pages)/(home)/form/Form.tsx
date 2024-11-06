@@ -9,6 +9,9 @@ import * as yup from 'yup'
 import FormField from '../../../components/input/FormField';
 import { CustomCheckbox } from '@/app/components/checkbox/Checkbox';
 import Link from 'next/link';
+import Image from 'next/image';
+import FeedbackImg from '../../../../../public/feedback.webp'
+import { Modal } from '@/app/components/modal/Modal';
 
 const Form = forwardRef(function Contacts(props, ref: ForwardedRef<HTMLDivElement>) {
     const [stateName, setStateName] = useState<string>('')
@@ -17,7 +20,7 @@ const Form = forwardRef(function Contacts(props, ref: ForwardedRef<HTMLDivElemen
     const [stateTerms, setStateTerms] = useState<boolean>(false)
 
     const [isModal, setModal] = useState<boolean>(false)
-    const [errorMessage, setErrorMessage] = useState<string>('')
+    const [message, setMessage] = useState<string>('')
     const [isFocused, setIsFocused] = useState({
         name: false,
         phone: false,
@@ -49,6 +52,7 @@ const Form = forwardRef(function Contacts(props, ref: ForwardedRef<HTMLDivElemen
             stateMail,
             date,
         }
+        console.log(data);
 
         const JSONdata = JSON.stringify(data)
 
@@ -64,27 +68,43 @@ const Form = forwardRef(function Contacts(props, ref: ForwardedRef<HTMLDivElemen
         const result = await response.json()
 
         if (result.status === "Сообщение успешно отправлено") {
-            setModal(true)
             reset()
-            setErrorMessage('')
-            setStateTerms(false)
+            setMessage('Заявка отправлена!')
+            setTimeout(() => {
+                setModal(true)
+            }, 500)
             setTimeout(() => {
                 setModal(false)
             }, 4000)
+            setTimeout(() => {
+                setStateTerms(false)
+                setMessage('')
+                setStateName('')
+                setStatePhone('')
+                setStateMail('')
+            }, 4300)
         } else if (result.status === "error") {
-            setErrorMessage(result.message)
-            // setSendErrorModal(true)
+            setMessage(result.message)
             setTimeout(() => {
-                // setSendErrorModal(false)
+                setModal(true)
+            }, 500)
+            setTimeout(() => {
+                setModal(false)
             }, 4000)
-            setErrorMessage('')
+            setTimeout(() => {
+                setMessage('')
+            }, 4300)
         } else if (result.status === 'Сообщение не отправлено') {
-            setErrorMessage('Сообщение не было отправлено, попробуйте позже')
-            // setSendErrorModal(true)
+            setMessage('Сообщение не было отправлено, попробуйте позже')
             setTimeout(() => {
-                // setSendErrorModal(false)
+                setModal(true)
+            }, 500)
+            setTimeout(() => {
+                setModal(false)
             }, 4000)
-            setErrorMessage('')
+            setTimeout(() => {
+                setMessage('')
+            }, 4300)
         }
     }
 
@@ -92,11 +112,9 @@ const Form = forwardRef(function Contacts(props, ref: ForwardedRef<HTMLDivElemen
         if (stateTerms) {
             try {
                 submitHandler()
-            } catch (error) {
-                // console.log(error);
-            }
+            } catch (error) { }
         } else {
-            setErrorMessage('Для отправки формы примите условия использования')
+            setMessage('Для отправки формы примите условия использования')
         }
     }
 
@@ -188,10 +206,22 @@ const Form = forwardRef(function Contacts(props, ref: ForwardedRef<HTMLDivElemen
         <section className={styles.container}>
             <h2 className={styles.title}>Заполни анкету и получи проект мечты или пробный доступ к авторскому курсу "Ремонт с нуля" БЕСПЛАТНО</h2>
             <div ref={ref} className={styles.ref_block} />
-
             <form className={styles.form_container} onSubmit={handleSubmit(onSubmit)}>
+                <div className={styles.image_container}>
+                    <Image
+                        src={FeedbackImg}
+                        alt='Обратная связь'
+                        fill
+                        priority
+                        quality={75}
+                        placeholder='blur'
+                        style={{
+                            pointerEvents: 'none',
+                        }}
+                        draggable="true"
+                    />
+                </div>
                 <div className={styles.form}>
-
                     <FormField
                         type='text'
                         width={'300px'}
@@ -245,30 +275,27 @@ const Form = forwardRef(function Contacts(props, ref: ForwardedRef<HTMLDivElemen
                                 checked={stateTerms}
                                 changeState={() => {
                                     setStateTerms(!stateTerms)
-                                    setErrorMessage('')
+                                    setMessage('')
                                 }}
                             />
                             <p className={cn(styles.agreement)}>Я прочитал <Link className={cn(styles.link)} href='https://abstudiokurs.ru/policy'>пользовательское соглашение</Link> и даю согласие на обработку
                                 персональных данных</p>
-                            {errorMessage && (
+                            {message && !stateTerms && (
                                 <span role="alert" className={cn(styles.error_terms)}>
-                                    {errorMessage}
+                                    {message}
                                 </span>
                             )}
                         </div>
                     </div>
+                    <button className={cn(styles.submit_btn)}
+                        type="submit"
+                    >
+                        Получить
+                    </button>
+                    <Modal isModalActive={isModal} message={message} successful={message === 'Заявка отправлена!' ? 'true' : 'false'} />
                 </div>
-                <button className={cn(styles.submit_btn)}
-                    type="submit"
-                >
-                    Получить
-                </button>
-
-                {/* <Modal isModalActive={isModal} message='Форма отправлена!' successful='true' />
-            <Modal isModalActive={isErrorModal} message='Необходимо ответить на все вопросы анкеты' successful='false' />
-            <Modal isModalActive={isSendErrorModal} message={errorMessage} successful='false' /> */}
             </form>
-        </section>
+        </section >
     )
 })
 

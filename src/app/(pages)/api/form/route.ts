@@ -3,10 +3,15 @@ const nodemailer = require("nodemailer")
 import { render } from '@react-email/render';
 import { WelcomeEmail } from '../../../emails/EmailTemplate'
 
-async function sendMail(data: any) {
-  const name = data?.name
-  const phone = data?.phone
-  const mail = data?.mail
+async function sendMail(data: {
+  stateName: string
+  statePhone: string
+  stateMail: string
+  date: string
+}) {
+  const name = data?.stateName
+  const phone = data?.statePhone
+  const mail = data?.stateMail
   const date = data?.date
 
   const formattedBody = await render(WelcomeEmail({

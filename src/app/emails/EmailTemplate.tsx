@@ -27,7 +27,7 @@ export function WelcomeEmail(props: EmailType) {
           fontWeight: "500",
           color: `white`,
           padding: '60px 0px',
-        }}>LUMICA</Section>
+        }}>AB_studio</Section>
         <Container style={container}>
           <Text style={{
             fontSize: "32px",
@@ -83,7 +83,7 @@ export function WelcomeEmail(props: EmailType) {
 
 // Styles for the email template
 const main = {
-  backgroundColor: 'rgba(0,0,68,1)',
+  backgroundColor: 'black',
   height: '100%',
   width: '720px',
   paddingBottom: '40px',
@@ -93,7 +93,7 @@ const container = {
   // margin: "0 auto",
   padding: "20px 20px 48px",
   width: "720px",
-  minHeight: '640px',
+  minHeight: '440px',
   maxHeight: '1920px',
   backgroundColor: '#fff',
   borderRadius: '20px',

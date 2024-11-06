@@ -14,14 +14,14 @@
     height: 20px;
     background: #fff;
     border: 2px solid var(--brown);
-    background: var(--black);
+    background: #0d0e12;
     margin-right: 4px;
     &:hover {
         cursor: pointer;
     }
     &.active {
         border-color: var(--brown);
-        background: var(--black);
+        background: #0d0e12;
     }
 }
 
